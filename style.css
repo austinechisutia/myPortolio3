@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Young+Serif&display=swap');
+
 *{
     margin: 0;
     padding: 0;
@@ -22,6 +24,7 @@ body{
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    font-family: "Young Serif", serif;
 }
 .nav-icons{
     display: flex;
@@ -31,6 +34,7 @@ body{
     border-radius: 20px;
     padding: 10px 20px;
     background-color: var(--sixth-color);
+    margin-top: 20px;
 }
 .nav-icons svg{
     color: var(--third-color);
@@ -53,4 +57,20 @@ body{
 .active svg{
     color: var(--main-color)
 
+}
+.icon-label {
+    position: absolute;
+    top: 10px;
+    background: var(--fifth-color);
+    color: white;
+    padding: 3px 7px;
+    border-radius: 5px;
+    font-size: 12px;
+    white-space: nowrap;
+    border: 1px solid var(--third-color);
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+.home:hover .icon-label {
+    opacity: 1;
 }
