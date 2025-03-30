@@ -26,7 +26,7 @@ body{
     justify-content: center;
     font-family: "Young Serif", serif;
     overflow-x: hidden;
-    overflow-y: hidden;
+    color: var(--second-color);
 
 }
 .nav-icons{
@@ -105,10 +105,18 @@ body{
     align-items: center;
     gap: 10px;
     min-width: 100px;
+    border-radius: 5px;
+    backdrop-filter: blur(8px); /* Blurs content behind */
 }
+
+
 .profile img{
     border-radius: 50%;
-    border: 1px solid var(--third-color);
+    border-top: 3px solid var(--third-color);
+    border-right: 3px dashed var(--third-color);
+    border-bottom: 3px dotted var(--third-color);
+    border-left: 3px double var(--third-color);
+    
     padding: 10px;}
 .online-blink{
     width: 10px;
@@ -141,3 +149,57 @@ body{
     animation: rotateImage 15s linear infinite;
 }
 
+.profile-details{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 20px;
+    max-width: 500px;
+}
+.profile-title{
+    font-size: 40px;
+    font-weight: 900;
+    color: var(--second-color);
+}
+.profile-description{
+    font-size: 18px;
+    font-weight: 400;
+    color: var(--third-color);
+    text-align: center;
+    padding: 0 20px;
+    font-family: "Roboto", sans-serif;
+}
+.explore-work, .connect{
+    background-color: var(--sixth-color);
+    padding: 10px 20px;
+    border: 1px solid var(--third-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    min-width: 100px;
+    border-radius: 5px;
+    font-family: Roboto, sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    width: 250px;
+}
+.explore-work:hover, .connect:hover{
+    background-color: var(--second-color);
+    color: var(--main-color);
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+.explore-work svg, .connect svg{
+    color: var(--third-color);
+    width: 20px;
+}
+.connect{
+    background-color: var(--second-color);
+    color: var(--main-color);
+}
+.bxx{
+    
+}
