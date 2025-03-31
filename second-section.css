@@ -16,4 +16,66 @@ h5.results {
     font-family: "Roboto", sans-serif;
     font-size: 14px;
     font-weight: bold;
+
+}
+.klinic{
+    background: rgb(61, 61, 61);
+    padding: 20px;
+    border: 1px solid var(--third-color);
+    border-radius: 10px;
+}
+.klinic-title{
+    font-size: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.klinic-title{
+    text-align: left;
+    font-size: 25px;
+}
+.klinic-top{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+    text-align: left;
+    font-size: 20px;
+    font-weight: 900;
+    color: var(--second-color);
+}
+.klinic-functions{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+    text-align: left;
+    font-size: 20px;
+    font-weight: 900;
+    color: var(--second-color);
+}
+.klinic-function1{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.line{
+    width: 100%;
+    height: 1px;
+    background-color: var(--third-color);
+    margin: 10px 0;
+    opacity: 0.5;
+}
+.klinic .connect svg{
+    rotate: 45deg;
+}
+@media (max-width: 768px) {
+   .klinic{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    text-align: center;
+   }
 }
