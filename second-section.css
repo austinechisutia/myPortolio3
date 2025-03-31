@@ -107,28 +107,32 @@ h5.results {
 .third-section-main {
     overflow: hidden; /* Hide overflow */
     white-space: nowrap; /* Prevent line breaks */
-    width: 100%; /* Full width */
+    width: 100vw; /* Full width */
     rotate: -1deg;
     background: var(--eighth-color);
     font-family: "Roboto", sans-serif;
     font-size: 14px;
     padding: 10px 0; /* Padding for spacing */
-    color: var(--third-color);
+    color: var(--main-color);
+    box-shadow: 0 0 40px 20px rgba(0, 0, 0, 0.5);
 }
-.third-section-main:hover {
+.third-section-main:hover{
 
     background: var(--sixth-color); /* Change background on hover */
     color: var(--second-color); /* Change text color on hover */
-    transition: background 0.3s ease, color 0.3s ease; /* Smooth transition */
+    transition: background 0.5s ease, color 0.1s ease; /* Smooth transition */
 
 }
+
+
 /* Add a hover effect to the text */
-.scrolling-text:hover {
+.scrolling-text h5:hover {
     animation-play-state: paused;
 
 }
 
 .third-section {
+   
     display: flex; /* Use flexbox for alignment */
     animation: scroll 10s linear infinite; /* Animation for scrolling */
 }
@@ -142,7 +146,7 @@ h5.results {
         transform: translateX(0); /* Start from the left */
     }
     100% {
-        transform: translateX(-100%); /* Move left by the full width of the text */
+        transform: translateX(-75%); /* Move left by the full width of the text */
     }
 }
 
@@ -150,3 +154,33 @@ h5 {
     display: inline-block; /* Keep h5 elements inline */
     margin: 0 20px; /* Space between words */
 }
+.scrolling-text{
+    display: flex;
+    align-items: center;
+}
+
+.star {
+    width:20px;
+    height: 20px;
+    background: var(--main-color);
+    clip-path: polygon(
+      50% 0%, 61% 35%, 98% 35%, 
+      68% 57%, 79% 91%, 50% 70%, 
+      21% 91%, 32% 57%, 2% 35%, 
+      39% 35%
+    );
+    animation: rotateStar 5s linear infinite;
+
+  }
+    .star:hover {
+        background: var(--eighth-color);
+    } 
+
+    @keyframes rotateStar {
+        0% {
+            transform: rotate(0deg);
+        }
+        100% {
+            transform: rotate(360deg);
+        }
+    }
