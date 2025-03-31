@@ -1,0 +1,19 @@
+@import url("style.css");
+
+
+.second-section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    text-align: center;
+}
+h5.results {
+    background: var(--eighth-color);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-family: "Roboto", sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+}
