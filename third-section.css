@@ -281,4 +281,16 @@
     }
 }
 
+.left-map {
+    object-fit: cover;
+    width: 100%;
+    white-space: 0;
+}
+
+.map{
+    object-fit: cover;
+    
+}
+
+
 
