@@ -53,11 +53,15 @@
     align-items: center;
     
 }
+.fifth-container{
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    align-items: stretch;
+}
 .fifth-top{
-    display: grid;
-    grid-template-columns: 1fr 2fr;
+    display: flex;
     width: 80vw;
-    
     align-items: center;
     justify-content: center;
     gap: 40px;
@@ -158,11 +162,7 @@
         transform: translate(28%);
     }
 }
-.fifth-container{
-    display: flex;
-    flex-direction: column;
-    gap: 40px;
-}
+
 .hobby{
     background: var(--eighth-color);
     padding: 5px 10px;
@@ -170,13 +170,14 @@
     border-radius: 20px;
     font-family: sans-serif;
     font-weight: 600;
+    transform: rotate(calc(10deg - (20deg * var(--random-rotation))));
+    
     
 }
 .fifth-bottom{
     display: grid;
     grid-template-columns: 2fr 1fr;
     width: 80vw;
-    
     align-items: center;
     justify-content: center;
     gap: 40px;

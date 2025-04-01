@@ -3,61 +3,81 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Seamless Scrolling Row</title>
+    <title>Random Hobbies</title>
     <style>
-        .container {
-            width: 300px; /* Adjust as needed */
-            overflow: hidden;
-            border: 2px solid black;
-            white-space: nowrap;
+        .hobbies {
             position: relative;
+            width: 400px;
+            height: 300px;
+            border: 2px solid #333;
+            overflow: hidden;
+            background-color: #f9f9f9;
         }
 
-        .scrolling-wrapper {
-            display: flex;
-            width: max-content;
-            animation: scrollRow 5s linear infinite;
-        }
-
-        @keyframes scrollRow {
-            from {
-                transform: translateX(0);
-            }
-            to {
-                transform: translateX(-50%);
-            }
-        }
-
-        .item {
-            display: inline-block;
-            margin: 0 10px;
-            background: lightblue;
+        .hobby {
+            position: absolute;
+            background: #ff6b6b;
             padding: 5px 10px;
-            border-radius: 5px;
+            color: white;
+            border-radius: 20px;
+            font-family: sans-serif;
+            font-weight: bold;
+            text-align: center;
+            white-space: nowrap;
+            transform: rotate(calc(10deg - (20deg * var(--random-rotation))));
         }
     </style>
 </head>
 <body>
 
-    <div class="container">
-        <div class="scrolling-wrapper">
-            <div class="scrolling-row">
-                <span class="item">Item 1</span>
-                <span class="item">Item 2</span>
-                <span class="item">Item 3</span>
-                <span class="item">Item 4</span>
-                <span class="item">Item 5</span>
-            </div>
-            <!-- Duplicate content -->
-            <div class="scrolling-row">
-                <span class="item">Item 1</span>
-                <span class="item">Item 2</span>
-                <span class="item">Item 3</span>
-                <span class="item">Item 4</span>
-                <span class="item">Item 5</span>
-            </div>
+    <div class="fifth-right">
+        <h1>Beyond the Code</h1>
+        <p class="desc">
+            Explore my interests and hobbies beyond the digital realm.
+        </p>
+        <div class="language-icons-anime">
+            <div class="hobbies"></div>
         </div>
     </div>
+
+    <script>
+        function getRandomHobbies() {
+            const allHobbies = [
+                "Gaming", "Traveling", "Cooking", "Football", "Photography",
+                "Sketching", "Hiking", "Martial Art", "Reading", "Movies",
+                "Pro-wrestling", "Music", "Dancing", "Cycling", "Writing"
+            ];
+
+            // Shuffle and pick 7 random hobbies
+            let shuffled = allHobbies.sort(() => Math.random() - 0.5);
+            return shuffled.slice(0, 7);
+        }
+
+        function randomizeHobbies() {
+            let container = document.querySelector('.hobbies');
+            let selectedHobbies = getRandomHobbies();
+            let containerWidth = container.clientWidth;
+            let containerHeight = container.clientHeight;
+
+            selectedHobbies.forEach(hobbyName => {
+                let hobby = document.createElement('div');
+                hobby.classList.add('hobby');
+                hobby.textContent = hobbyName;
+
+                let randomX = Math.random() * (containerWidth - 80); // Avoid overflow
+                let randomY = Math.random() * (containerHeight - 30);
+                let randomRotation = Math.random() * 2 - 1; // Between -1 and 1
+
+                hobby.style.left = `${randomX}px`;
+                hobby.style.top = `${randomY}px`;
+                hobby.style.setProperty('--random-rotation', randomRotation);
+
+                container.appendChild(hobby);
+            });
+        }
+
+        randomizeHobbies();
+    </script>
 
 </body>
 </html>
