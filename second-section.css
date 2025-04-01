@@ -146,7 +146,7 @@ h5.results {
         transform: translateX(0); /* Start from the left */
     }
     100% {
-        transform: translateX(-75%); /* Move left by the full width of the text */
+        transform: translateX(-50%); /* Move left by the full width of the text */
     }
 }
 

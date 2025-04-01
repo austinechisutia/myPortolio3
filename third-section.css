@@ -49,4 +49,85 @@
     display: flex;
     flex-direction: column;
     max-width: 550px;
+    justify-content: center;
+    align-items: center;
+    
+}
+.klinic-fourth1 .language-buttons{
+    display: flex;
+    white-space: nowrap;
+    position: relative;
+    flex-direction: column;
+    max-width: 550px;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+.klinic-fourth1 img{
+    height: 50%;
+    width: 50%;
+    object-fit: cover;
+
+}
+.fifth-top{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 20px;
+}
+.language-buttons{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    font-family: "Roboto", sans-serif;
+
+}
+.language-icons1{
+    display: flex;
+    gap: 10px;
+}
+.language-icon{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    padding: 8px 18px;
+    border: 1px solid ;
+    color: var(--third-color);
+    margin: 0 10px;
+
+}
+
+.scrolling-row{
+    display: flex;
+    gap: 10px;
+}
+.icons1{
+    display: flex;
+    width: max-content;
+    animation: scrollRow 10s linear infinite;
+}
+@keyframes scrollRow {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-30%);
+    }
+}
+.icons2{
+    display: flex;
+    width: max-content;
+    animation: scrolRow 20s linear infinite;
+}
+@keyframes scrolRow {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(30%);
+    }
+}
+.fith-section-subsections{
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
