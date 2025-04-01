@@ -53,3 +53,132 @@
     align-items: center;
     
 }
+.fifth-top{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    width: 80vw;
+    
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+
+}
+.fifth-left{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    overflow: hidden;
+    flex-wrap: nowrap;
+}
+.fifth-left img{
+    width: 50%;
+}
+.fifth-left, .fifth-right{
+    background: var(--sixth-color);
+    border: 1px solid var(--third-color);
+    border-radius: 10px;
+    height: 300px;
+    padding: 20px;
+    max-width: 100vh;
+
+
+
+}
+.desc{
+    font-family: sans-serif;
+    color: var(--third-color);
+}
+@media (max-width: 1100px) {  /* Use a colon (:) instead of an equal sign (=) */
+    .fifth-top {
+        display: flex;
+        flex-direction: column;
+        width: 80vw;
+        align-items: center;
+        justify-content: center;
+        gap: 40px;
+    }
+}
+.fifth-right{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    width: inherit;
+}
+
+
+.language-icons-anime{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.anime-icon{
+    border: 1px solid var(--third-color);
+    display: flex;
+    align-items: center;
+    padding: 5px 10px;
+    font-family: sans-serif;
+    color: var(--third-color);
+}
+.tops-animes{
+    display: flex;
+    gap: 10px;
+
+}
+.top-anime{
+    display: flex;
+    gap: 10px;
+
+}
+
+.anime1{
+    animation:  overFlow 5s linear infinite;
+
+}
+@keyframes overFlow{
+    0%{
+        transform: translateX(0);
+    }
+    100%{
+        transform: translate(-28%);
+    }
+}
+.anime2{
+    animation:  overFllow 5s linear infinite;
+
+}
+@keyframes overFllow{
+    0%{
+        transform: translateX(0);
+    }
+    100%{
+        transform: translate(28%);
+    }
+}
+.fifth-container{
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+.hobby{
+    background: var(--eighth-color);
+    padding: 5px 10px;
+    color: var(--main-color);
+    border-radius: 20px;
+    font-family: sans-serif;
+    font-weight: 600;
+    
+}
+.fifth-bottom{
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    width: 80vw;
+    
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+
+}
