@@ -50,6 +50,16 @@
 .ttt{
     display: flex;
     gap: 20px;
+    transition: transform 0.5s ease;
+
+}
+.testimonials:hover{
+    animation-play-state: paused;
+}
+.klinic-fourth:hover{
+    rotate: -2deg;
+    z-index: 1000;
+
 }
 @keyframes overflow{
     0%{
