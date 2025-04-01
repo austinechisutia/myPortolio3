@@ -162,18 +162,25 @@
         transform: translate(28%);
     }
 }
-
-.hobby{
-    background: var(--eighth-color);
-    padding: 5px 10px;
-    color: var(--main-color);
-    border-radius: 20px;
-    font-family: sans-serif;
-    font-weight: 600;
-    transform: rotate(calc(10deg - (20deg * var(--random-rotation))));
-    
-    
+.hobbies {
+    position: relative;
+    width: 400px; /* Adjust as needed */
+    height: 100px; /* Adjust as needed */
+    margin: auto;
 }
+
+.hobby {
+    position: absolute;
+    background: var(--eighth-color);
+    color: var(--main-color);
+    padding: 8px 12px;
+    text-align: center;
+    font-weight: bold;
+    border-radius: 10px;
+    white-space: nowrap;
+    transition: transform 0.5s ease-in-out;
+}
+
 .fifth-bottom{
     display: grid;
     grid-template-columns: 2fr 1fr;
