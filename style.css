@@ -20,9 +20,15 @@
     --ninth-color: #660000;
     --tenth-color: #330000;
 }
+
+html, body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* Ensures no scrolling */
+}
 body{
-    position: relative;
     background: var(--main-color);
+    width: 100vw;
     margin-top: 40px;
     padding: 20px;
     display: flex;

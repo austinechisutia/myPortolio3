@@ -59,6 +59,10 @@ h5.results {
     display: flex;
     align-items: center;
     gap: 10px;
+    font-family: sans-serif;
+    font-weight: 400;
+    color: var(--third-color);
+    font-size: 15px;
 }
 .line{
     width: 100%;
