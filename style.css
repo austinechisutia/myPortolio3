@@ -48,6 +48,10 @@ span a{
     text-decoration: none;
     color: var(--second-color);
 }
+.ttt .klinic-fourth{
+    display: flex;
+    width: 100vw;
+}
 .nav-icons{
 
     position: fixed;
@@ -284,5 +288,8 @@ span a{
         text-decoration: none;
         color: var(--second-color);
     }
+
+
+   
 
 

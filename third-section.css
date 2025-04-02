@@ -11,8 +11,7 @@
 
 .profile-top{
     display: flex;
-    flex-direction: row;
-    justify-content: center;
+    align-items: left;
     gap: 10px;
     text-align: left;
     font-size: 20px;
@@ -20,8 +19,8 @@
     color: var(--second-color);
 }
 .profile-picture img{
-    width: 100px;
-    height: 100px;
+    width: 80px;
+    height: 80px;
     border-radius: 50%;
     border-top: 3px solid var(--third-color);
     border-right: 3px dashed var(--third-color);
@@ -44,7 +43,6 @@
 }
 .testimonials{
     display: flex;
-    flex-direction: column;
     gap: 20px;
     overflow: hidden;
     animation: overflow 10s linear infinite;
@@ -55,6 +53,10 @@
     transition: transform 0.5s ease;
 
 }
+.ttt .klinic-fourth{
+    width: 400px;
+}
+
 .testimonials:hover{
     animation-play-state: paused;
 }
@@ -64,11 +66,11 @@
 
 }
 @keyframes overflow{
-    0%{
-      transform: translateX(0%);  
+    from{
+      transform: translateX(0);  
     }
-    100%{
-        transform: translateX(40%);
+    to{
+        transform: translateX(35%);
     }
 }
 .klinic-fourth{

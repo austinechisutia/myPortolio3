@@ -1,3 +1,5 @@
+
+
 function randomizeHobbies() {
             let container = document.getElementById('hobbies-container');
             let hobbies = Array.from(container.children);
@@ -33,3 +35,5 @@ function randomizeHobbies() {
                 });
             });
         });
+
+        

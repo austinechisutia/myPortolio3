@@ -3,81 +3,61 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Random Hobbies</title>
+    <title>Infinite Horizontal Scroll</title>
     <style>
-        .hobbies {
-            position: relative;
-            width: 400px;
-            height: 300px;
-            border: 2px solid #333;
-            overflow: hidden;
-            background-color: #f9f9f9;
-        }
+        /* Full-width container */
 
-        .hobby {
-            position: absolute;
-            background: #ff6b6b;
-            padding: 5px 10px;
+        html body{
+            overflow: hidden;
+        }
+        .container{
+            overflow: hidden;
+            position: relative;
+            width: 100vw;
+            
+        }
+        .slider{
+            display: flex;
+            width: max-content;
+            animation: scroll 10s linear infinite;
+        }
+        .item{
+            width: 400px;
+            height: 200px;
+            background: #ff4500;
             color: white;
-            border-radius: 20px;
-            font-family: sans-serif;
-            font-weight: bold;
-            text-align: center;
-            white-space: nowrap;
-            transform: rotate(calc(10deg - (20deg * var(--random-rotation))));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            margin: 0 40px;
+
+        }
+        @keyframes scroll {
+            from {
+                transform: translateX(0);
+            }
+            to {
+                transform: translateX(-50%);
+            }
         }
     </style>
 </head>
 <body>
 
-    <div class="fifth-right">
-        <h1>Beyond the Code</h1>
-        <p class="desc">
-            Explore my interests and hobbies beyond the digital realm.
-        </p>
-        <div class="language-icons-anime">
-            <div class="hobbies"></div>
+    <div class="container">
+        <div class="slider">
+            <div class="item">Item 1</div>
+            <div class="item">Item 2</div>
+            <div class="item">Item 3</div>
+            <div class="item">Item 4</div>
+            <!-- Duplicate items for smooth looping -->
+            <div class="item">Item 1</div>
+            <div class="item">Item 2</div>
+            <div class="item">Item 3</div>
+            <div class="item">Item 4</div>
         </div>
     </div>
-
-    <script>
-        function getRandomHobbies() {
-            const allHobbies = [
-                "Gaming", "Traveling", "Cooking", "Football", "Photography",
-                "Sketching", "Hiking", "Martial Art", "Reading", "Movies",
-                "Pro-wrestling", "Music", "Dancing", "Cycling", "Writing"
-            ];
-
-            // Shuffle and pick 7 random hobbies
-            let shuffled = allHobbies.sort(() => Math.random() - 0.5);
-            return shuffled.slice(0, 7);
-        }
-
-        function randomizeHobbies() {
-            let container = document.querySelector('.hobbies');
-            let selectedHobbies = getRandomHobbies();
-            let containerWidth = container.clientWidth;
-            let containerHeight = container.clientHeight;
-
-            selectedHobbies.forEach(hobbyName => {
-                let hobby = document.createElement('div');
-                hobby.classList.add('hobby');
-                hobby.textContent = hobbyName;
-
-                let randomX = Math.random() * (containerWidth - 80); // Avoid overflow
-                let randomY = Math.random() * (containerHeight - 30);
-                let randomRotation = Math.random() * 2 - 1; // Between -1 and 1
-
-                hobby.style.left = `${randomX}px`;
-                hobby.style.top = `${randomY}px`;
-                hobby.style.setProperty('--random-rotation', randomRotation);
-
-                container.appendChild(hobby);
-            });
-        }
-
-        randomizeHobbies();
-    </script>
 
 </body>
 </html>
