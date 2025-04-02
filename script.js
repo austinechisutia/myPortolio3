@@ -18,3 +18,18 @@ function randomizeHobbies() {
 
         // Run on page load
         randomizeHobbies();
+
+
+        document.querySelectorAll('nav a').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const sectionId = this.getAttribute('href');
+                const section = document.querySelector(sectionId);
+                const offset = 60; // Adjust based on navbar height
+                const sectionPosition = section.getBoundingClientRect().top + window.scrollY - offset;
+                window.scrollTo({
+                    top: sectionPosition,
+                    behavior: 'smooth'
+                });
+            });
+        });
