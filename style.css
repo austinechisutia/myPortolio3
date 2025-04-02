@@ -41,6 +41,13 @@ body{
     color: var(--second-color);
 
 }
+.circles{
+    position: absolute;
+}
+span a{
+    text-decoration: none;
+    color: var(--second-color);
+}
 .nav-icons{
 
     position: fixed;
@@ -270,5 +277,12 @@ body{
     .star:hover {
         animation: rotateStar 1s linear infinite;
     }  
+
+    .contact-me a{
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+        color: var(--second-color);
+    }
 
 
