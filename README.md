@@ -4,7 +4,7 @@ Welcome to my personal **Portfolio Website**, built to showcase my work in web d
 
 ## 🌍 Live Demo
 
-👉 [Visit My Portfolio](https://your-portfolio-link.com)
+👉 [Visit My Portfolio(https://austinechisutia.github.io/myPortolio3/)
 
 ## 📌 About The Project
 
@@ -52,17 +52,10 @@ The goal is not just to show what I can do, but also how I think, solve problems
 - **Name**: Austine Akhonya  
 - **Role**: Web Developer / Graphic Designer / Animator / Storyteller  
 - **Email**: austineakhonya624@gmail.com  
-- **Phone**: +54768400317  
-- **Fiverr**: [fiverr.com/yourusername](https://fiverr.com/yourusername)  
-- **GitHub**: [github.com/yourusername](https://github.com/yourusername)  
+- **Phone**: +254768400317  
+ 
 
----
 
-## 📸 Screenshots
-
-_Include a few screenshots or screen recordings of your site in action to visually showcase your work._
-
----
 
 ## 🤝 Contributing
 
