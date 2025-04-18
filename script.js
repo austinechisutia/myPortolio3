@@ -116,3 +116,16 @@ const container = document.getElementById("projects");
             `;
             container.innerHTML += projectHTML;
 });
+
+
+const qualities = [
+    "ACCESSIBLE", "INTERACTIVE", "RESPONSIVE", "SCALABLE",
+    "USABLE", "SECURE", "SEARCH OPTIMIZED", "USER FRIENDLY",
+    "ACCESSIBLE", "INTERACTIVE", "RESPONSIVE", "SCALABLE"
+  ];
+
+  const scrollingTextHTML = qualities.map(text => `
+    <h5>${text}</h5><div class="star"></div>
+  `).join("");
+
+    document.querySelector(".qualities").innerHTML = scrollingTextHTML;
