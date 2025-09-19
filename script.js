@@ -250,3 +250,10 @@ technologies.forEach(tech => {
 
 // Update the text of containerMove with technology names
 containerMove.innerText = technologies.map(tech => tech.name).join(" | ");
+
+
+const bot = document.querySelector(".ifr-js");
+
+  bot.addEventListener("onclick", ()=>{
+    bot.style.display = "none";
+  })

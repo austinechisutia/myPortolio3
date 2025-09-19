@@ -44,8 +44,8 @@ body{
 }
 .ifr{
     position: fixed;
-    top: 80px;
-    right: 0;
+    bottom: 40px;
+    right: 10px;
     z-index: 999;
     border-radius: 20px;
 }
