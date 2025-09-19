@@ -46,6 +46,15 @@ body{
     position: fixed;
     top: 80px;
     right: 0;
+    z-index: 999;
+    border-radius: 20px;
+}
+@media screen and (max-width:760px){
+    .ifr{
+        width: 300px;
+        height: 100px
+
+    }
 }
 .circles{
     position: absolute;
