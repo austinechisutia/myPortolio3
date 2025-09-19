@@ -27,6 +27,7 @@ html, body {
     overflow-x: hidden; /* Ensures no scrolling */
 }
 body{
+    position: relative;
     background: var(--main-color);
     width: 100vw;
     margin-top: 40px;
@@ -40,6 +41,11 @@ body{
     overflow-x: hidden;
     color: var(--second-color);
 
+}
+.ifr{
+    position: fixed;
+    top: 80px;
+    right: 0;
 }
 .circles{
     position: absolute;
