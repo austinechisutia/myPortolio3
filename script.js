@@ -254,6 +254,6 @@ containerMove.innerText = technologies.map(tech => tech.name).join(" | ");
 
 const bot = document.querySelector(".ifr-js");
 
-  bot.addEventListener("onclick", ()=>{
+  bot.addEventListener("click", ()=>{
     bot.style.display = "none";
   })
